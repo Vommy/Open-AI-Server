@@ -1,9 +1,7 @@
-import { Express } from 'express';
+import { Express } from "express";
 
-module.exports = (app: Express)  => {
+module.exports = (app: Express) => {
+  const cocktail = require("../controllers/cocktail.controller");
 
-    const cocktail = require("../controllers/cocktail.controller");
-
-    app.get("/cocktail-desc", cocktail.genDesc);
-
-}
+  app.get("/cocktail-desc", cocktail.genDesc);
+};
