@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 
 /**
  * Generates a description for a cocktail using the cocktail.createDesc() method when a request is sent through routes.js.
+ * @author Veren Villegas
  * @returns {JSON} The description of the cocktail as JSON in the form of {desc: cocktail}.
  */
 exports.genDesc = async (req: Request, res: Response) => {

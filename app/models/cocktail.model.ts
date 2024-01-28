@@ -14,6 +14,7 @@ const Cocktail = function (Cocktail: any) {
  * Creates a description for a cocktail using ChatGPT.
  * @param title The title of the cocktail.
  * @returns The description for the cocktail from ChatGPT
+ * @author Veren Villegas
  */
 Cocktail.createDesc = async (title: string) => {
   try {
