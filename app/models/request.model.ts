@@ -5,8 +5,8 @@ const oApiKey = process.env.OPEN_API_KEY;
 
 const openai = new OpenAI({ apiKey: oApiKey });
 
-const Cocktail = function (Cocktail: any) {
-  let name = Cocktail.name;
+const Request = function (Request: any) {
+  let name = Request.name;
   name = name;
 };
 
@@ -16,14 +16,14 @@ const Cocktail = function (Cocktail: any) {
  * @returns The description for the cocktail from ChatGPT
  * @author Veren Villegas
  */
-Cocktail.createDesc = async (title: string) => {
+Request.sendRequest = async (request: string) => {
   try {
     const completion = await openai.chat.completions.create({
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         {
           role: "user",
-          content: `Generate a small product description for the following cocktail name: ${title}`,
+          content: `${request}`,
         },
       ],
       model: "gpt-3.5-turbo-1106",
@@ -36,4 +36,4 @@ Cocktail.createDesc = async (title: string) => {
   }
 };
 
-module.exports = Cocktail;
+module.exports = Request;

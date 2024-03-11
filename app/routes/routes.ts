@@ -1,7 +1,7 @@
 import { Express } from "express";
 
 module.exports = (app: Express) => {
-  const cocktail = require("../controllers/cocktail.controller");
+  const request = require("../controllers/request.controller");
 
-  app.get("/cocktail-desc", cocktail.genDesc);
+  app.get("/chatgpt-req", request.genRequest);
 };
