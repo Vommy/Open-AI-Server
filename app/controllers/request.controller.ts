@@ -17,7 +17,7 @@ exports.genRequest = async (req: Request, res: Response) => {
         res.status(500).send({
           Error: `Error generating request to send to OpenAI.`,
         });
-      else res.json({ desc: content });
+      else res.json({ role: "assistant", content: content });
     } else
       res.status(400).send({
         message: "A request to OpenAI must be specified.",
