@@ -10,11 +10,15 @@ This server can be used for connecting applications to allow for conversations w
 ```
   OPENAI_API_KEY = {your_openai_key}
 ```
-4. To compile the TypeScript files, run the following command in the terminal:
+4. Install the required node modules with this command:
 ```
-tsc
+  npm i
 ```
-5. To run the server, run the following command in the terminal:
+5. To compile the TypeScript files, run the following command in the terminal:
 ```
-node index.js
+  tsc
+```
+6. To run the server, run the following command in the terminal:
+```
+  node index.js
 ```
